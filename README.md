@@ -2,7 +2,7 @@
 
 [![Lisans: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[ParseAI hakkında kısa, öz ve etkileyici bir açıklama yazın. Projenin yapay zeka kullanarak işlemleri nasıl kolaylaştırdığını veya ne işe yaradığını burada anlatın.]
+ParseAI, PDF belgelerinizi yükleyip analiz etmenizi ve Gemini Yapay Zeka modeli sayesinde bu belgelerle akıllı bir şekilde sohbet etmenizi sağlayan tam yığın (full-stack) bir uygulamadır.
 
 ## 📑 İçindekiler
 
@@ -17,17 +17,19 @@
 ## ✨ Özellikler
 
 Projenin en önemli özellikleri:
-- ✔️ **Yapay Zeka Destekli İşlemler**: [Açıklama giriniz]
-- ✔️ **Hızlı ve Etkili Analiz (Parsing)**: [Açıklama giriniz]
-- ✔️ **Kullanıcı Dostu Kullanım**: [Açıklama giriniz]
+- ✔️ **Yapay Zeka Destekli Belge Analizi**: Yüklediğiniz PDF dosyalarından anlamlı bilgiler çıkarır ve Google Gemini AI kullanarak bu verilerle etkileşime girmenizi sağlar.
+- ✔️ **Akıllı Metin Parçalama (Smart Chunking)**: Büyük belgeleri otomatik olarak anlamlı küçük parçalara bölerek vektör veritabanında saklar.
+- ✔️ **Gerçek Zamanlı Akış (Streaming)**: Yapay zeka yanıtlarını beklemeden kelime kelime, gerçek zamanlı olarak ekranda görürsünüz.
+- ✔️ **Kullanıcı Dostu Arayüz**: Modern ve hızlı bir React tabanlı frontend ile kesintisiz bir kullanıcı deneyimi sunar.
 
 ## 🛠 Teknolojiler
 
 Bu proje aşağıdaki teknolojiler kullanılarak geliştirilmiştir:
 
-- **[Ana Dil veya Framework]** (örn: Python, Node.js, React vb.)
-- **[Kullanılan Yapay Zeka Kütüphanesi / API]** (örn: OpenAI API, LangChain)
-- **[Diğer Kütüphaneler ve Araçlar]**
+- **Backend**: .NET 9.0, C#, ASP.NET Core Web API
+- **Frontend**: React.js, TypeScript, Vite
+- **Yapay Zeka**: Google Gemini API, RAG (Retrieval-Augmented Generation) mimarisi
+- **Diğer Araçlar**: In-Memory Vector Store, Entity Framework Core, Google OAuth (Kimlik Doğrulama)
 
 ## ⚙️ Kurulum
 
@@ -43,24 +45,27 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
    cd ParseAI-
    ```
 
-3. Gerekli paketleri yükleyin:
+3. Backend'i çalıştırın:
    ```bash
-   # Projenizin gereksinimlerine göre bu kısmı düzenleyin (örn: npm install veya pip install)
-   npm install
+   cd src/AnalyzeChat.API
+   # Not: appsettings.Development.json dosyasını oluşturup API anahtarlarınızı eklemeyi unutmayın
+   dotnet run
    ```
 
-4. Projeyi başlatın:
+4. Frontend'i çalıştırın (yeni bir terminalde):
    ```bash
-   npm start
+   cd ../../frontend
+   npm install
+   npm run dev
    ```
 
 ## 🚀 Kullanım
 
-[Projenin nasıl kullanılacağına dair örnekler. Gerekirse kullanım kodları veya ekran görüntüleri ekleyin.]
-
-```javascript
-// Örnek kullanım kodu (eğer varsa)
-```
+Projeyi kurduktan sonra:
+1. Tarayıcınızda `http://localhost:5173` (veya Vite'ın verdiği port) adresine gidin.
+2. Sisteme giriş yapın.
+3. Analiz etmek istediğiniz PDF dosyalarını yükleyin.
+4. Sohbet arayüzünü kullanarak belgeleriniz hakkında sorular sorun ve yapay zekanın belgeye dayalı yanıtlar vermesini izleyin!
 
 ## 🤝 Katkıda Bulunma
 
